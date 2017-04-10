@@ -37,4 +37,18 @@ You should now have a file called `package.json` inside the `server` folder:
 ```
 </details>
 
+```javascript
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+```
+
 
