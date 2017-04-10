@@ -21,7 +21,22 @@ Using `npm` ( which comes installed with node ) we can use a pre-defined CLI com
 ### Solution
 You should now have a file called `package.json` inside the `server` folder:
 <details>
-<summary> Test </summary>
+<summary> package.json </summary>
+<details>
+```json
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+```
+</details>
 </details>
 
 
