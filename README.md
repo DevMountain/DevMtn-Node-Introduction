@@ -13,7 +13,7 @@ In order to get started with the project we will need to do the following:
 
 ## Step 1
 ### Summary
-In this step we will create a package.json file to allow us to install packages. The package.json is what `npm` uses to handle packages and also to install packages. Without a package.json with the required `name` and `version` field, you woudl not be able to install any packages into your project. 
+In this step we will create a package.json file to allow us to install packages. The package.json is what `npm` uses to handle packages and also to install packages. Without a package.json with the required `name` and `version` field, you would not be able to install any packages into your project. 
 
 ### Instructions 
 Using `npm` ( which comes installed with node ) we can use a pre-defined CLI command called `init` that will interactively create a package.json on for us. In your terminal use `npm init` and press the enter key for every option. This will create a package.json file for us with all the default values.
@@ -21,7 +21,6 @@ Using `npm` ( which comes installed with node ) we can use a pre-defined CLI com
 ### Solution
 You should now have a file called `package.json` inside the `server` folder:
 <details>
-
 <summary> package.json </summary>
 
 ```javascript
@@ -37,7 +36,6 @@ You should now have a file called `package.json` inside the `server` folder:
   "license": "ISC"
 }
 ```
-
 </details>
 
 
