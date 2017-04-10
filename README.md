@@ -22,7 +22,7 @@ Using `npm` ( which comes installed with node ) we can use a pre-defined CLI com
 You should now have a file called `package.json` inside the `server` folder:
 <details>
 <summary> package.json </summary>
-```json
+```javascript
 {
   "name": "server",
   "version": "1.0.0",
