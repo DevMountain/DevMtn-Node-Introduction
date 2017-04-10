@@ -21,7 +21,9 @@ Using `npm` ( which comes installed with node ) we can use a pre-defined CLI com
 ### Solution
 You should now have a file called `package.json` inside the `server` folder:
 <details>
+
 <summary> package.json </summary>
+
 ```javascript
 {
   "name": "server",
@@ -35,6 +37,7 @@ You should now have a file called `package.json` inside the `server` folder:
   "license": "ISC"
 }
 ```
+
 </details>
 
 ```javascript
