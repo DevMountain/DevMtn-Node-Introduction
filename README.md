@@ -81,14 +81,22 @@ var express = require('express');
 var bodyParser = require('body-parser');
 ```
 
-This file now knows about the `express` and `body-parser` packages inside of our node_modules folder. Creating a server using express is as easy as invoking express and assigning to a variable. 
+This file now knows about the `express` and `body-parser` packages inside of our node_modules folder. Creating a server using express is as easy as invoking express and assigning it to a variable. 
 
 ```javascript
 var express = require('express');
 var bodyParser = require('body-parser');
-var server = express();
+var app = express();
 ```
 
-We now 
+We now have an express application stored in `app`. If you were to `console.log` app you will see that it is a object full of properties and methods. The ones we are worried about are `.listen` and `.static`. `.listen` will allow us to determine what port our server should listen on and `.static` will allow us to server our html files on that port.
+
+```javascript
+var express = require('express');
+var bodyParser = require('body-parser');
+var app = express();
+
+app.listen(3000, function() { console.log('Server intiated on port 3000'); });
+```
 
 
