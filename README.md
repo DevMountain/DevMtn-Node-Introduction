@@ -259,7 +259,9 @@ app.put('/user', (req, res) => {
 });
 ```
 Now when we do a PUT request on /user our response will be what `req.query` is. Query parameters are constructed in the requesting URL. For example: `http://localhost:3000/user?username=bob`. The `?` is the special character that defines where our parameters begin. This example is sending a parameter of `username` that is equal to `bob`. Let's see what this will return for us.
-
+<p align="center">
+<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/3g.gif" width="800">
+</p>
 
 
 ## Contributions
