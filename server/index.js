@@ -1,11 +1,11 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
 
-var user = {
+const user = {
 	username: 'dev',
 	password: 'mountain',
 	email: 'dev@mountain.com'
 };
 
-app.listen(3000, function() { console.log('Server intiated on port 3000'); });
+app.listen(3000, () => { console.log('Server initiated on port 3000'); });

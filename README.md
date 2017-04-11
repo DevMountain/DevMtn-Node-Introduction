@@ -16,7 +16,7 @@ In order to get started with the project we will need to do the following:
 ### Summary
 In this step we will create a package.json file to keep track of our dependencies and their versions for this project.
 
-### Instructions 
+### Instructions
 Using `npm` ( which comes installed with node ) we can use a pre-defined CLI command called `init` that will interactively create a package.json for us. In your terminal use `npm init` and press the enter key for every option. This will create a package.json file for us with all the default values.
 
 ### Solution
@@ -41,7 +41,7 @@ You should now have a file called `package.json` inside the `server` folder:
 
 ## Step 2
 ### Summary
-In this step will use `npm` to install and save our required dependencies to run an express server. 
+In this step will use `npm` to install and save our required dependencies to run an express server.
 
 ### Instructions
 Using the terminal you can install multiple packages using `npm install <package_name> <package_name>`. We will also add the `--save` tag so the packages get saved to our package.json. For our express server we will be installing the packages `express` and `body-parser`. `npm install --save express body-parser`.
@@ -72,32 +72,32 @@ Your package.json should look very familiar to the following (version numbers ma
 
 ## Step 3
 ### Summary
-In this step we will create the basic outline of our server in a javascript file. The name of this file doesn't matter as long as it matches the entry point in your package.json. Since we created our package.json using the default values it is expecting a file called `index.js`. 
+In this step we will create the basic outline of our server in a javascript file. The name of this file doesn't matter as long as it matches the entry point in your package.json. Since we created our package.json using the default values it is expecting a file called `index.js`.
 
 ### Instructions
-Create a file called `index.js` in the server folder and open it. We'll start by requiring the packages we installed earlier at the top of the file. 
+Create a file called `index.js` in the server folder and open it. We'll start by requiring the packages we installed earlier at the top of the file.
 
 ```javascript
-var express = require('express');
-var bodyParser = require('body-parser');
+const express = require('express');
+const bodyParser = require('body-parser');
 ```
 
-This file now knows about the `express` and `body-parser` packages inside of our node_modules folder. Creating a server using express is as easy as invoking express and assigning it to a variable. 
+This file now knows about the `express` and `body-parser` packages inside of our node_modules folder. Creating a server using express is as easy as invoking express and assigning it to a variable.
 
 ```javascript
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
 ```
 
 We now have an express application stored in `app`. If you were to `console.log` app you will see that it is a object full of properties and methods. The ones we are worried about are `.listen` and `.static`. `.listen` will allow us to determine what port our server should listen on and `.static` will allow us to server our html files on that port. Let's start by telling our server to listen on port 3000.
 
 ```javascript
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
 
-app.listen(3000, function() { console.log('Server intiated on port 3000'); });
+app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 ```
 
 ## Step 4
@@ -111,17 +111,17 @@ Let's start by creating an object under `app` called `user`. Let's give it some 
 <summary> index.js </summary>
 
 ```javascript
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
 
-var user = {
+const user = {
 	username: 'dev',
 	password: 'mountain',
 	email: 'dev@mountain.com'
 };
 
-app.listen(3000, function() { console.log('Server intiated on port 3000'); });
+app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 ```
 </details>
 
