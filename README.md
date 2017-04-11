@@ -207,12 +207,14 @@ app.get('/user', (req, res) => {
 In this step we will use postman to test that our endpoint is returning our user object.
 
 ### Instructions
-Make sure that your server is still running and open postan. In postman make sure GET is selected, type in `http://localhost:3000/user`, and press Send.
+Make sure that your server is still running and open postman. In postman make sure GET is selected, type in `http://localhost:3000/user`, and press Send.
 
 ### Solution
 <p align="center">
 <img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/2g.gif" width="800">
 </p>
+
+What you see returned are the properties that you originally set on the user object.
 
 ## Contributions
 If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
