@@ -17,7 +17,7 @@ In order to get started with the project we will need to do the following:
 In this step we will create a package.json file to keep track of our dependencies and their versions for this project.
 
 ### Instructions 
-Using `npm` ( which comes installed with node ) we can use a pre-defined CLI command called `init` that will interactively create a package.json on for us. In your terminal use `npm init` and press the enter key for every option. This will create a package.json file for us with all the default values.
+Using `npm` ( which comes installed with node ) we can use a pre-defined CLI command called `init` that will interactively create a package.json for us. In your terminal use `npm init` and press the enter key for every option. This will create a package.json file for us with all the default values.
 
 ### Solution
 You should now have a file called `package.json` inside the `server` folder:
@@ -41,7 +41,7 @@ You should now have a file called `package.json` inside the `server` folder:
 
 ## Step 2
 ### Summary
-In this step will use `npm` to install our required dependencies to run an express server. 
+In this step will use `npm` to install and save our required dependencies to run an express server. 
 
 ### Instructions
 Using the terminal you can install multiple packages using `npm install <package_name> <package_name>`. We will also add the `--save` tag so the packages get saved to our package.json. For our express server we will be installing the packages `express` and `body-parser`. `npm install --save express body-parser`.
@@ -90,7 +90,7 @@ var bodyParser = require('body-parser');
 var app = express();
 ```
 
-We now have an express application stored in `app`. If you were to `console.log` app you will see that it is a object full of properties and methods. The ones we are worried about are `.listen` and `.static`. `.listen` will allow us to determine what port our server should listen on and `.static` will allow us to server our html files on that port.
+We now have an express application stored in `app`. If you were to `console.log` app you will see that it is a object full of properties and methods. The ones we are worried about are `.listen` and `.static`. `.listen` will allow us to determine what port our server should listen on and `.static` will allow us to server our html files on that port. Let's start by telling our server to listen on port `3000`.
 
 ```javascript
 var express = require('express');
