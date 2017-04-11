@@ -123,7 +123,7 @@ In your terminal, make sure you are in the server directory, run `nodemon`.
 
 ## Step 5
 ### Summary
-In this step we will create a global object called `user` that will have some default properties. This will be the object we will modify and read through endpoints we'll create in the following steps.
+Now that we have a working server will can start making endpoints and mutating some data. In this step we will create a global object called `user` that will have some default properties. This will be the object we will modify and read through endpoints we'll create in the following steps.
 
 ### Instructions
 Let's start by creating an object under `app` called `user`. Let's give it some properties: `username`, `password`, and `email`. The values can be whatever strings you like.
@@ -204,12 +204,15 @@ app.get('/user', (req, res) => {
 
 ## Step 8
 ### Summary
-In this step we will start our server and use postman to test that our endpoint is returning our user object.
+In this step we will use postman to test that our endpoint is returning our user object.
 
 ### Instructions
-Make sure that your terminal is in the `server` folder and run `nodemon`. You should see the console.log appear that the server was initiated on port 3000. Also, open postman and make sure GET is selected. Then type in `http://localhost:3000/user`.
+Make sure that your server is still running and open postan. In postman make sure GET is selected, type in `http://localhost:3000/user`, and press Send.
 
 ### Solution
+<p align="center">
+<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/2g.gif" width="800">
+</p>
 
 ## Contributions
 If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
