@@ -138,4 +138,18 @@ Another important thing to note is that endpoints take two parameters, the first
 After our `user` object let's create a get endpoint using `app.get()`. The first parameter is the route of the endpoint after `http://localhost:3000/` and the second parameter is function we want to be called when that route is hit. If we did `app.get('/')` then whenever we did a get call at `http://localhost:3000/` the provided function would then be called.
 
 
+## Contributions
+
+### Contributions
+
+If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
+
+## Copyright
+
+### Copyright
+
+© DevMountain LLC, 2017. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
+
+<img src="https://devmounta.in/img/logowhiteblue.png" width="250">
+
 
