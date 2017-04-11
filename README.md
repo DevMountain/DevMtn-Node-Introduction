@@ -73,6 +73,8 @@ Your package.json should look very familiar to the following (version numbers ma
 ```
 </details>
 
+
+If you do not see `"dependencies"` then you forgot to add the `--save` tag to your npm install command.
 ## Step 3
 ### Summary
 In this step we will create the basic outline of our server in a javascript file. The name of this file doesn't matter as long as it matches the entry point in your package.json. Since we created our package.json using the default values it is expecting a file called `index.js`.
@@ -188,9 +190,12 @@ app.get('/user', (req, res) => {
 
 ## Step 7
 ### Summary
-In this step we will use postman to test that our endpoint is returning our user object.
+In this step we will start our server and use postman to test that our endpoint is returning our user object.
 
 ### Instructions
+Make sure that your terminal is in the `server` folder and run `nodemon`. You should see the console.log appear that the server was initiated on port 3000. Also, open postman and make sure GET is selected. Then type in `http://localhost:3000/user`.
+
+### Solution
 
 ## Contributions
 If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
