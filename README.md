@@ -153,6 +153,7 @@ const user = {
   email: 'dev@mountain.com'
 };
 
+// http://localhost:3000/user
 app.get('/user', () => {
 
 });
