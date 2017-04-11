@@ -125,6 +125,7 @@ app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 ```
 </details>
 
+
 Now let's create a couple endpoints. In express you can create an endpoint by doing `app.get`, `app.put`, `app.post`, and `app.delete`. Since we want an endpoint for reading, creating, and updating we'll use `app.get`, `app.post`, and `app.put`.
 
 
