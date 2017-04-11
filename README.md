@@ -117,7 +117,9 @@ In your terminal, make sure you are in the server directory, run `nodemon`.
 * Check node version: In your terminal use the command `node --version`
 * Download node: https://nodejs.org/en/download/
 ### Solution
-
+<p align="center">
+<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/1g.gif" />
+</p>
 
 ## Step 5
 ### Summary
