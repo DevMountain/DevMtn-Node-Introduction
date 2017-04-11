@@ -236,10 +236,12 @@ app.*('path', function)
 <summary> index.js </summary>
 
 ```js
+// http://localhost:3000/user/update
 app.post('/user/update', (req, res) => {
 
 });
 
+// http://localhost:3000/user/new
 app.put('/user/new', (req, res) => {
 
 });
