@@ -38,4 +38,35 @@ You should now have a file called `package.json` inside the `server` folder:
 ```
 </details>
 
+## Step 2
+### Summary
+In this step will use `npm` to install our required dependencies to run an express server. 
+
+### Instructions
+Using the terminal you can install multiple packages using `npm install <package_name> <package_name>`. We will also add the `--save` tag so the packages get saved to our package.json. For our express server we will be installing the packages `express` and `body-parser`. `npm install express body-parser`.
+
+### Solution
+Your package.json should look very familiar to the following (version numbers may vary):
+<details>
+<summary> package.json </summary>
+
+```javascript
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
+```
+</details>
+
 
