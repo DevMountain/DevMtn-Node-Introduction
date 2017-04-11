@@ -274,6 +274,30 @@ We now know that req.query is equal to an object. After the special character `?
 
 Take note that `"1234"` is a string and not a number. Values will always be stored on req.query as strings.
 
+Knowing that req.query is an object and that its values are strings we can loop through the parameters that are sent and update our user object if those properties already exist. To do this will use a method of Object called keys. This returns an array of all the keys on an object. We'll then loop through that array of keys and see if it exists on our user object using another method of Object called hasOwnProperty. If it hasOwnProperty returns true, we will update that property on user using the value on req.query using bracket notation.
+
+### Solution
+<details>
+<summary> index.js </summary>
+
+```js
+// http://localhost:3000/user
+app.put('/user', (req, res) => {
+  var keys = Object.keys(req.query);
+
+  for ( var i = 0; i < keys.length; i++ ) {
+    if ( user.hasOwnProperty(keys[i]) ) {
+      user[keys[i]] = req.query[keys[i]]
+    }
+  }
+
+  res.send(user);
+});
+```
+</details>
+
+
+
 
 ## Contributions
 If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
