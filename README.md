@@ -130,6 +130,8 @@ app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 ### Summary
 In this step we will create a read enpoint to interact with our global object `user`. In express you can create an endpoint by doing `app.get`, `app.put`, `app.post`, and `app.delete`. Since we want a read endpoint we'll use `app.get`. Take note that I'm saying `app.*` because our express application was stored in a variable called `app`. If I named it something else like `foo`, then it would be `foo.get`, `foo.put`, `foo.post`, and `foo.delete` instead.
 
+Another important thing to note is that endpoints take two parameters, the first one being the route and the second one being the function to be called when that route is hit.
+
 ### Instructions
 After our `user` object let's create a get endpoint using `app.get()`. The first parameter is the route of the endpoint after `http://localhost:3000/` and the second parameter is function we want to be called when that route is hit. If we did `app.get('/')` then whenever we did a get call at `http://localhost:3000/` the provided function would then be called.
 
