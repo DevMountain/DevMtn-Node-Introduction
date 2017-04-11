@@ -272,6 +272,8 @@ We now know that req.query is equal to an object. After the special character `?
 }
 ```
 
+Take note that `"1234"` is a string a not a number. Values will always be stored on req.query as strings.
+
 
 ## Contributions
 If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
