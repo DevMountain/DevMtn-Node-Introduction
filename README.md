@@ -221,7 +221,7 @@ What you see returned are the properties that you originally set on the user obj
 In this step we will create the basic outline of the rest of our endpoints. 
 
 ### Instructions
-On your own try to make an endpoint that will be used for UPDATING properties on the user object and also CREATING new properties on the user object. Don't worry about the logic that will go inside the endpoint, but rather how you create endpoints. For example: which method you should use and what parameters does the callback function of an endpoint take.
+On your own try to make an endpoint that will be used for UPDATING properties on the user object and also and endpoint that will be used for CREATING new properties on the user object. Don't worry about the logic that will go inside the endpoint, but rather how you create endpoints. For example: which method you should use and what parameters does the callback function of an endpoint take.
 
 * For the create endpoint: use the path '/user/new'
 * For the update endpoint: use the path '/user/update'
