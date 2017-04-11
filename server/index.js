@@ -12,4 +12,12 @@ app.get('/user', (req, res) => {
 	res.send(user);
 });
 
+app.post('/user/update', (req, res) => {
+
+});
+
+app.put('/user/new', (req, res) => {
+
+});
+
 app.listen(3000, () => { console.log('Server initiated on port 3000'); });
