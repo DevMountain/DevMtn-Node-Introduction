@@ -1,4 +1,4 @@
-<img src="https://devmounta.in/img/logowhiteblue.png" width="250" align="center">
+<img src="https://devmounta.in/img/logowhiteblue.png" width="250" align="right">
 
 # DevMtn-Node-Introduction
 insert final picture here
