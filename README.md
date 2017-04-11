@@ -263,7 +263,14 @@ Now when we do a PUT request on /user our response will be what `req.query` is. 
 <img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/3g-1.gif" width="800">
 </p>
 
-We now know that req.query is equal to an object. After the special character `?` it looks at left side of the `=` sign and sets that as the key on an object and looks at the right side of the `=` sign and sets that as the value of the key.
+We now know that req.query is equal to an object. After the special character `?` it looks at the left side of the `=` sign and sets that as the key on an object and looks at the right side of the `=` sign and sets that as the value of the key. You can also send more than one parameter at a time using the special character `&`. For example if I did: `http://localhost:3000/user?username=bob&password=1234` req.query would equal:
+
+```js
+{
+  username: "bob",
+  password: "1234"
+}
+```
 
 
 ## Contributions
