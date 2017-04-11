@@ -9,7 +9,7 @@ const user = {
 };
 
 app.get('/user', (req, res) => {
-	res.status(200).send(user);
+	res.send(user);
 });
 
 app.listen(3000, () => { console.log('Server initiated on port 3000'); });
