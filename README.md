@@ -247,6 +247,21 @@ app.put('/user', (req, res) => {
 ```
 </details>
 
+## Step 10
+### Summary
+In this step will go over how to use query parameters on a request to update already existing properties on the `user` object.
+### Instructions
+Let's start by visualizing what happens when we send query parameters to our server. In our index.js, let's return req.query in our `put` method.
+```js
+// http://localhost:3000/user
+app.put('/user', (req, res) => {
+  res.send(req.query);
+});
+```
+Now when we do a PUT request on /user our response will be what `req.query` is. Query parameters are constructed in the requesting URL. For example: `http://localhost:3000/user?username=bob`. The `?` is the special character that defines where our parameters begin. This example is sending a parameter of `username` that is equal to `bob`. Let's see what this will return for us.
+
+
+
 ## Contributions
 If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
 

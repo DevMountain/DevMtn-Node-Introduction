@@ -15,7 +15,7 @@ app.get('/user', (req, res) => {
 
 // http://localhost:3000/user
 app.put('/user', (req, res) => {
-
+  res.send(req.query);
 });
 
 // http://localhost:3000/user
