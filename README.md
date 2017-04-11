@@ -223,12 +223,11 @@ In this step we will create the basic outline of the rest of our endpoints.
 ### Instructions
 On your own try to make an endpoint that will be used for UPDATING properties on the user object and also and endpoint that will be used for CREATING new properties on the user object. Don't worry about the logic that will go inside the endpoint, but rather how you create endpoints. For example: which method you should use and what parameters does the callback function of an endpoint take.
 
-* For the create endpoint: use the path '/user/new'
-* For the update endpoint: use the path '/user/update'
+* Since we are using three different methods we can use the exact same path and our server will be smart enough to call the right function. Oooo magic.
 
 Hint:
 ```js
-app.*('path', function)
+app.*('/user', function)
 ```
 
 ### Solution
@@ -236,13 +235,13 @@ app.*('path', function)
 <summary> index.js </summary>
 
 ```js
-// http://localhost:3000/user/update
-app.post('/user/update', (req, res) => {
+// http://localhost:3000/user
+app.post('/user', (req, res) => {
 
 });
 
-// http://localhost:3000/user/new
-app.put('/user/new', (req, res) => {
+// http://localhost:3000/user
+app.put('/user', (req, res) => {
 
 });
 ```

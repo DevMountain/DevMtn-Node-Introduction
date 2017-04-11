@@ -13,13 +13,13 @@ app.get('/user', (req, res) => {
 	res.send(user);
 });
 
-// http://localhost:3000/user/update
-app.post('/user/update', (req, res) => {
+// http://localhost:3000/user
+app.put('/user', (req, res) => {
 
 });
 
-// http://localhost:3000/user/new
-app.put('/user/new', (req, res) => {
+// http://localhost:3000/user
+app.post('/user', (req, res) => {
 
 });
 
