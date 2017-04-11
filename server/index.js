@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
+console.log('App:', app);
+
 const user = {
 	username: 'dev',
 	password: 'mountain',

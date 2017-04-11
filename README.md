@@ -10,7 +10,7 @@ In this project we will go over the basics of setting up a node server that can 
 ## Setup
 In order to get started with the project we will need to do the following:
 * Install postman ( https://www.getpostman.com/ )
-* Install node +7.5.0 ( https://nodejs.org/en/download/ )
+* Install node - Make sure to select current, not LTS ( https://nodejs.org/en/download/ )
 * Install nodemon ( `sudo npm install -g nodemon` )
 * Create a directory called server in the root of the project ( `mkdir server` )
 * `cd` into server
@@ -44,7 +44,7 @@ You should now have a file called `package.json` inside the `server` folder:
 
 ## Step 2
 ### Summary
-In this step will use `npm` to install and save our required dependencies to run an express server.
+In this step we will use `npm` to install and save our required dependencies to run an express server.
 
 ### Instructions
 Using the terminal you can install multiple packages using `npm install <package_name> <package_name>`. We will also add the `--save` tag so the packages get saved to our package.json. For our express server we will be installing the packages `express` and `body-parser`. `npm install --save express body-parser`.
@@ -93,7 +93,7 @@ const bodyParser = require('body-parser');
 const app = express();
 ```
 
-We now have an express application stored in `app`. If you were to `console.log` app you will see that it is a object full of properties and methods. The ones we are worried about are `.listen` and `.static`. `.listen` will allow us to determine what port our server should listen on and `.static` will allow us to server our html files on that port. Let's start by telling our server to listen on port 3000.
+We now have an express application stored in `app`. Our app includes methods like `.listen`, `.static`, `.get`, `.put`, `.delete`, `.post` and many others. We'll cover what each of these do later on in the lesson. For now we'll use `.listen` to tell our server what port to listen on. `.listen` takes two parameters, the first one being the port to listen on and the second one being an optional callback.
 
 ```javascript
 const express = require('express');
@@ -102,6 +102,8 @@ const app = express();
 
 app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 ```
+
+We now have a server with no endpoints listening on port 3000 and the server will print out 'Server initiated on port 3000' after being initialized.
 
 ## Step 4
 ### Summary
