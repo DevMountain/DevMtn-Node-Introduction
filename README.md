@@ -216,6 +216,18 @@ Make sure that your server is still running and open postman. In postman make su
 
 What you see returned are the properties that you originally set on the user object.
 
+## Step 9
+### Summary
+In this step we will create the basic outline of the rest of our endpoints. On your own try to make an endpoint that will be used for UPDATING properties on the user object and also CREATING new properties on the user object. Don't worry about the logic that will go inside the endpoint, but rather how you create endpoints and which method you should use.
+
+* For the create endpoint: use the path '/user/new'
+* For the update endpoint: use the path '/user/update'
+
+Hint:
+```js
+app.*('path', function)
+```
+
 ## Contributions
 If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
 
