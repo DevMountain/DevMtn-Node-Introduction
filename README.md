@@ -110,12 +110,12 @@ We now have a server with no endpoints listening on port 3000 at localhost or 12
 ## Step 4
 ### Summary
 In this step we will start our server. If everything intializes correctly you should see a log in your terminal `'Server inititated on port 3000'`. If you are seeing errors with `const` check to make sure that your node version is +7.5.0.
-### Instructions
-In your terminal, make sure you are in the server directory, run `nodemon`.
-
 
 * Check node version: In your terminal use the command `node --version`
 * Download node: https://nodejs.org/en/download/
+### Instructions
+In your terminal, make sure you are in the server directory, run `nodemon`.
+
 ### Solution
 <p align="center">
 <img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/1g.gif" width="800">
