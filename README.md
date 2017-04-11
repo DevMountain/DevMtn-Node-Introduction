@@ -142,7 +142,7 @@ HTTP Methods:
 * Creating - POST
 
 ### Instructions
-After our `user` object let's create a get endpoint using `app.get()`. The first parameter is the path of the endpoint and the second parameter is a function we want to be called when that path is hit. If we did `app.get('/')` then whenever we did a get call at `http://localhost:3000/` or `http://127.0.0.1:3000/` the provided function would then be called. If we did `app.get('/foo')` then the provided function would be called at `http://localhost:3000/foo` or `http://127.0.0.1:3000/foo`. For this example let's do a get at the path of `/user`.
+After our `user` object let's create a get endpoint using `app.get()`. The first parameter is the path of the endpoint and the second parameter is a function we want to be called when that path is hit. If we did `app.get('/')` then whenever we did a get request at `http://localhost:3000/` or `http://127.0.0.1:3000/` the provided function would then be called. If we did `app.get('/foo')` then the provided function would be called at `http://localhost:3000/foo` or `http://127.0.0.1:3000/foo`. For this example let's do a get at the path of `/user`.
 
 ### Solution
 <details>
