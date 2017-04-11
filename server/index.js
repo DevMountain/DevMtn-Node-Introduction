@@ -2,15 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
-console.log('App:', app);
-
 const user = {
 	username: 'dev',
 	password: 'mountain',
 	email: 'dev@mountain.com'
 };
 
-app.get('/', (req, res) => {
+app.get('/user', (req, res) => {
 	res.status(200).send(user);
 });
 

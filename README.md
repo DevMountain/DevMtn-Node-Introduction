@@ -103,7 +103,7 @@ const app = express();
 app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 ```
 
-We now have a server with no endpoints listening on port 3000 and the server will print out 'Server initiated on port 3000' after being initialized.
+We now have a server with no endpoints listening on port 3000 at localhost or 127.0.0.1 and the server will print out 'Server initiated on port 3000' after being initialized.
 
 ## Step 4
 ### Summary
@@ -138,7 +138,30 @@ In this step we will create a read enpoint to interact with our global object `u
 Another important thing to note is that endpoints take two parameters, the first one being the route and the second one being the function to be called when that route is hit.
 
 ### Instructions
-After our `user` object let's create a get endpoint using `app.get()`. The first parameter is the route of the endpoint after `http://localhost:3000/` and the second parameter is function we want to be called when that route is hit. If we did `app.get('/')` then whenever we did a get call at `http://localhost:3000/` the provided function would then be called.
+After our `user` object let's create a get endpoint using `app.get()` that will return our global `user` object. The first parameter is the route of the endpoint and the second parameter is a function we want to be called when that route is hit. If we did `app.get('/')` then whenever we did a get call at `http://localhost:3000/` or `http://127.0.0.1:3000/` the provided function would then be called. For this example let's do a get at the route `/user`.
+
+### Solution
+<details>
+<summary> index.js </summary>
+
+```javascript
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+
+const user = {
+  username: 'dev',
+  password: 'mountain',
+  email: 'dev@mountain.com'
+};
+
+app.get('/user', (req, res) => {
+  res.status(200).send(user);
+});
+
+app.listen(3000, () => { console.log('Server initiated on port 3000'); });
+```
+</details>
 
 
 ## Contributions
