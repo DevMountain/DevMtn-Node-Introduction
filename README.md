@@ -43,7 +43,7 @@ You should now have a file called `package.json` inside the `server` folder:
 In this step will use `npm` to install our required dependencies to run an express server. 
 
 ### Instructions
-Using the terminal you can install multiple packages using `npm install <package_name> <package_name>`. We will also add the `--save` tag so the packages get saved to our package.json. For our express server we will be installing the packages `express` and `body-parser`. `npm install express body-parser`.
+Using the terminal you can install multiple packages using `npm install <package_name> <package_name>`. We will also add the `--save` tag so the packages get saved to our package.json. For our express server we will be installing the packages `express` and `body-parser`. `npm install --save express body-parser`.
 
 ### Solution
 Your package.json should look very familiar to the following (version numbers may vary):
@@ -68,5 +68,27 @@ Your package.json should look very familiar to the following (version numbers ma
 }
 ```
 </details>
+
+## Step 3
+### Summary
+In this step we will create the basic outline of our server in a javascript file. The name of this file doesn't matter as long as it matches the entry point in your package.json. Since we created our package.json using the default values it is expecting a file called `index.js`. 
+
+### Instructions
+Create a file called `index.js` in the server folder and open it. We'll start by requiring the packages we installed earlier at the top of the file. 
+
+```javascript
+var express = require('express');
+var bodyParser = require('body-parser');
+```
+
+This file now knows about the `express` and `body-parser` packages inside of our node_modules folder. Creating a server using express is as easy as invoking express and assigning to a variable. 
+
+```javascript
+var express = require('express');
+var bodyParser = require('body-parser');
+var server = express();
+```
+
+We now 
 
 
