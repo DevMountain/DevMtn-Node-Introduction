@@ -72,7 +72,7 @@ Your package.json should look very familiar to the following (version numbers ma
 }
 ```
 </details>
-
+<br />
 
 If you do not see `"dependencies"` then you forgot to add the `--save` tag to your npm install command.
 ## Step 3
