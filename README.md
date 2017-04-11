@@ -102,11 +102,12 @@ app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 
 ## Step 4
 ### Summary
-In this step we will create a global object called `user` that will have some default properties. We will also create three endpoints, one for reading the exisiting object `user`, one for modifying existing properties on the object `user`, and one for creating new properties on the object `user`.
+In this step we will create a global object called `user` that will have some default properties. This will be the object we will modify and read through endpoints we'll create in the following steps.
 
 ### Instructions
 Let's start by creating an object under `app` called `user`. Let's give it some properties: `username`, `password`, and `email`. The values can be whatever strings you like.
 
+### Solution
 <details>
 <summary> index.js </summary>
 
@@ -124,9 +125,13 @@ const user = {
 app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 ```
 </details>
-<br />
 
-Now let's create a couple endpoints. In express you can create an endpoint by doing `app.get`, `app.put`, `app.post`, and `app.delete`. Since we want an endpoint for reading, creating, and updating we'll use `app.get`, `app.post`, and `app.put`.
+## Step 5
+### Summary
+In this step we will create a read enpoint to interact with our global object `user`. In express you can create an endpoint by doing `app.get`, `app.put`, `app.post`, and `app.delete`. Since we want an endpoint we'll use `app.get`.
+
+### Instructions
+
 
 
 
