@@ -142,7 +142,7 @@ HTTP Methods:
 * Creating - POST
 
 ### Instructions
-After our `user` object let's create a get endpoint using `app.get()`. The first parameter is the path of the endpoint and the second parameter is a function we want to be called when that path is hit. If we did `app.get('/')` then whenever we did a get request at `http://localhost:3000/` or `http://127.0.0.1:3000/` the provided function would then be called. If we did `app.get('/foo')` then the provided function would be called at `http://localhost:3000/foo` or `http://127.0.0.1:3000/foo`. For this example let's do a get at the path of `/user`.
+After our `user` object let's create a get endpoint using `app.get()`. The first parameter is the path of the endpoint and the second parameter is a function we want to be called when that path is hit. Let's do a get at the path of `/user`.
 
 ### Solution
 <details>
@@ -170,7 +170,7 @@ app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 
 ## Step 6
 ### Summary
-Now that we have an endpoint at `/user` let's have it return the `user` object. The callback function of an endpoint takes two paramets, the first one being a request object and the second one being a response object. The request object has important information about the incoming request and the response object allows us to send a response back. These variables can be named whatever you like but I usually call them `req` and `res`. 
+Now that we have an endpoint at `/user` let's have it return the `user` object. The callback function of an endpoint takes two parameters, the first one being a request object and the second one being a response object. The request object has important information about the incoming request and the response object allows us to send a response back. These variables can be named whatever you like but I usually call them `req` and `res`. 
 
 ### Instructions
 Let's add the two parameters in our callback function and use `res` to send back `user`. We can do this by using the `.send` method on `res`.
@@ -185,6 +185,12 @@ app.get('/user', (req, res) => {
 });
 ```
 </details>
+
+## Step 7
+### Summary
+In this step we will use postman to test that our endpoint is returning our user object.
+
+### Instructions
 
 ## Contributions
 If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
