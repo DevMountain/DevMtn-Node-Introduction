@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://devmounta.in/img/logowhiteblue.png" width="250" align="right">
+<img src="https://devmounta.in/img/logowhiteblue.png" width="250">
 </p>
 
 
