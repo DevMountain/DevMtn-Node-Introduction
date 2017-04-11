@@ -102,7 +102,7 @@ app.listen(3000, function() { console.log('Server intiated on port 3000'); });
 
 ## Step 4
 ### Summary
-In this step we will create a global object called `user` that will have some default properties. We will also create two endpoints, one for modifying exsisting properties on the object `user` and one for creating new properties on the object `user`.
+In this step we will create a global object called `user` that will have some default properties. We will also create two endpoints, one for modifying existing properties on the object `user` and one for creating new properties on the object `user`.
 
 ### Instructions
 Let's start by creating an object under `app` called `user`. Let's give it some properties: `username`, `password`, and `email`. The values can be whatever strings you like.
