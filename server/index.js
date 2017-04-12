@@ -5,8 +5,8 @@ app.use(express.static( __dirname + '/../' ));
 app.use(bodyParser.json());
 
 const user = {
-	username: 'dev',
-	password: 'mountain',
+  username: 'dev',
+  password: 'mountain',
 };
 
 // http://localhost:3000/user-query

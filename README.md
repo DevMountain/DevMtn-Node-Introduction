@@ -311,7 +311,7 @@ app.use(bodyParser.json());
 Now when a request comes with JSON we can read it by using `req.body`. Then the logic is the same as looking at `req.query`, if it has a username update the `user`'s username and if it has a password update `user`'s password.
 
 
-In the `/user-body` endpoint let's add the logic to update our `user` object.
+In the `/user-body` endpoint let's add the logic to update our `user` object. Then test your endpoint with postman.
 ### Solution
 <details>
 <summary> index.js </summary>
@@ -324,8 +324,8 @@ app.use(express.static( __dirname + '/../' ));
 app.use(bodyParser.json());
 
 const user = {
-	username: 'dev',
-	password: 'mountain',
+  username: 'dev',
+  password: 'mountain',
 };
 
 // http://localhost:3000/user-query
@@ -357,6 +357,11 @@ app.put('/user-body', (req, res) => {
 app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 ```
 </details>
+<br />
+
+<p align="center">
+<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/5g.gif" width="800">
+</p>
 
 
 
