@@ -131,8 +131,9 @@ In your terminal, make sure you are in the server directory, run `nodemon`.
 
 ### Solution
 <p align="center">
-<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/1g.gif" width="500">
-<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/4g.gif" width="500">
+<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/1g.gif" width="800">
+<br />
+<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/5g.gif" width="800">
 </p>
 
 ## Step 6
