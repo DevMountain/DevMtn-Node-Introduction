@@ -1,7 +1,5 @@
 <img src="https://devmounta.in/img/logowhiteblue.png" width="250" align="right">
 
-
-# DevMtn-Node-Introduction
 ## Project Summary
 In this project we will go over the basics of setting up a node server that can serve HTML files, test our server's endpoints using postman, and learn how to use the body and parameters of a request.
 
