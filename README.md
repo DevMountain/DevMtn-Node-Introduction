@@ -101,7 +101,7 @@ const app = express();
 app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 ```
 
-We now have a server with no endpoints listening on port 3000 at localhost ( http://localhost:3000/ ) or 127.0.0.1 ( http://127.0.0.1:3000/ ) and the server will print out 'Server initiated on port 3000' after being initialized.
+We now have a server, that when started, will listen on port 3000 at localhost ( http://localhost:3000/ ) or 127.0.0.1 ( http://127.0.0.1:3000/ ) and will print out 'Server initiated on port 3000' after being initialized.
 
 
 ## Step 4
