@@ -360,7 +360,7 @@ app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 <br />
 
 <p align="center">
-<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/5g.gif" width="800">
+<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/6g.gif" width="800">
 </p>
 
 
