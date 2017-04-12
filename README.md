@@ -120,7 +120,7 @@ app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 ```
 `__dirname + '/../'` means use the current directory of this file ( in our case this would be index.js ) and go up one directory ( which would put us in the same directory as index.html )
 
-## Step 4
+## Step 5
 ### Summary
 In this step we will start our server. If everything intializes correctly you should see a log in your terminal `'Server inititated on port 3000'`. If you are seeing errors with `const` check to make sure that your node version is +7.5.0.
 
@@ -134,7 +134,7 @@ In your terminal, make sure you are in the server directory, run `nodemon`.
 <img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/1g.gif" width="800">
 </p>
 
-## Step 5
+## Step 6
 ### Summary
 Now that we have a working server will can start making endpoints and mutating some data. In this step we will create a global object called `user` that will have some default properties. This will be the object we will modify and read through endpoints we'll create in the following steps.
 
@@ -149,6 +149,7 @@ Let's start by creating an object under `app` called `user`. Let's give it two p
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+app.use(express.static( __dirname + '/../' ));
 
 const user = {
   username: 'dev',
@@ -159,7 +160,7 @@ app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 ```
 </details>
 
-## Step 6
+## Step 7
 ### Summary
 In this step we will create two endpoints to interact with our global object `user`. In express you can create an endpoint by doing `app.get`, `app.put`, `app.post`, and `app.delete`. `get`, `put`, `post`, and `delete` are known as methods of an HTTP request. Since we want an update endpoint we'll use the put method. Take note that I'm saying `app.*` because our express application was stored in a variable called `app`. If I named it something else like `foo`, then it would be `foo.get`, `foo.put`, `foo.post`, and `foo.delete` instead. 
 
@@ -180,6 +181,7 @@ After our `user` object let's create two put endpoints using `app.put()`. One wi
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+app.use(express.static( __dirname + '/../' ));
 
 const user = {
   username: 'dev',
@@ -200,7 +202,7 @@ app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 ```
 </details>
 
-## Step 7
+## Step 8
 ### Summary
 Now that we have an endpoint at `/user-query` and `/user-body` let's have them return the `user` object in our callback function. The callback function of an endpoint takes two parameters, the first one being a request object and the second one being a response object. The request object has important information about the incoming request and the response object allows us to send a response back. These variables can be named whatever you like but I usually call them `req` and `res`. 
 
@@ -224,7 +226,7 @@ app.put('/user-body', (req, res) => {
 ```
 </details>
 
-## Step 8
+## Step 9
 ### Summary
 In this step we will use postman to test that our endpoints are returning our `user` object.
 
