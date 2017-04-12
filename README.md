@@ -103,6 +103,22 @@ app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 
 We now have a server with no endpoints listening on port 3000 at localhost ( http://localhost:3000/ ) or 127.0.0.1 ( http://127.0.0.1:3000/ ) and the server will print out 'Server initiated on port 3000' after being initialized.
 
+
+## Step 4
+### Summary
+In this step we will code our server to serve our index.html file. 
+### Instructions
+When using express you can server HTML files using middleware and the `static` method of express. To use middleware in express you can do `app.use()`. You can think of middleware as items that will be called before hitting endpoints. The `static` method takes one parameter: being the file(s) location(s) to serve. Let's add a middleware underneath our `app` variable.
+### Solution
+```js
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+app.use(express.static( __dirname + '/../' ));
+
+app.listen(3000, () => { console.log('Server initiated on port 3000'); });
+```
+
 ## Step 4
 ### Summary
 In this step we will start our server. If everything intializes correctly you should see a log in your terminal `'Server inititated on port 3000'`. If you are seeing errors with `const` check to make sure that your node version is +7.5.0.
