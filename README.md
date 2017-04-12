@@ -118,7 +118,7 @@ app.use(express.static( __dirname + '/../' ));
 
 app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 ```
-`__dirname + '/../'` means use the current directory of this file ( in our case this would be index.js ), go up one directory ( which would put us in the same directory as index.html )
+`__dirname + '/../'` means use the current directory of this file ( in our case this would be index.js ) and go up one directory ( which would put us in the same directory as index.html )
 
 ## Step 4
 ### Summary
