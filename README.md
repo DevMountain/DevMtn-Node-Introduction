@@ -302,7 +302,15 @@ app.put('/user-query', (req, res) => {
 In this step we'll cover how to use the body of a request to update our global `user` object. Using the body is similar to using the query of a request because they are both objects. However, you send the body as an object alongside the request and we'll use our `body-parser` package so that we can read the body of the request. 
 
 ### Instructions
-Let's start by opening up postman and typing in our endpoint path. 
+Let's start by adding middleware to use our `body-parser` package.
+
+```js
+app.use(bodyParser.json());
+```
+
+Now when a request comes with JSON we can read it by using `req.body`. Then the logic is the same as looking at `req.query`, if it has a username update the `user`'s username and if it has a password update `user`'s password.
+
+
 
 ## Contributions
 If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
