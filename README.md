@@ -254,7 +254,7 @@ app.put('/user-query', (req, res) => {
   res.send(req.query);
 });
 ```
-Now when we do a PUT request on /user-query our response will be what `req.query` is. Query parameters are constructed in the requesting URL. For example: `http://localhost:3000/user-query?username=bob`. The `?` is the special character that defines where our parameters begin. This example is sending a parameter of `username` that is equal to `bob`. Let's see what this will return for us.
+Now when we do a PUT request on `/user-query` our response will be what `req.query` is. Query parameters are constructed in the requesting URL. For example: `http://localhost:3000/user-query?username=bob`. The `?` is the special character that defines where our parameters begin. This example is sending a parameter of `username` that is equal to `bob`. Let's see what this will return for us.
 <p align="center">
 <img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/3g-2.gif" width="800">
 </p>
@@ -270,7 +270,7 @@ We now know that req.query is equal to an object. After the special character `?
 
 Take note that `"1234"` is a string and not a number. Values will always be stored on req.query as strings.
 ### Instructions
-Knowing that req.query is an object we can check to see if it has a `username` property or a `password` property to update our global `user` object. In our `/user-query` endpoint lets add two if statements, one for checking if the query has a `username` property and one for checking if the query has a `password` property. Inside the if statements let's update our global `user` object and then have our endpoint respond with new updated `user` object.
+Knowing that `req.query` is an object we can check to see if it has a `username` property or a `password` property to update our global `user` object. In our `/user-query` endpoint lets add two if statements, one for checking if the query has a `username` property and one for checking if the query has a `password` property. Inside the if statements let's update our global `user` object and then have our endpoint respond with new updated `user` object.
 
 ### Solution
 <details>
