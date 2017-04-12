@@ -157,7 +157,7 @@ HTTP Methods:
 * Creating - POST
 
 ### Instructions
-After our `user` object let's create two put endpoints using `app.put()`. One will be for updating our user object using the request query and the other will be for updating our user object using the request body. The first parameter is the path of the endpoint and the second parameter is a function we want to be called when that path is hit. Let's do a put at the path of `/user-query` and another put at the path of `/user-body`.
+After our `user` object let's create two put endpoints using `app.put()`. One will be for updating our `user` object using the request query and the other will be for updating our `user` object using the request body. The first parameter is the path of the endpoint and the second parameter is a function we want to be called when that path is hit. Let's do a put at the path of `/user-query` and another put at the path of `/user-body`.
 
 ### Solution
 <details>
