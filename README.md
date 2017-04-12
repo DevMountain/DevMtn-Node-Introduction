@@ -270,6 +270,8 @@ app.put('/user-query', (req, res) => {
 });
 ```
 </details>
+<br />
+
 <p align="center">
 <img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/4g.gif" width="800">
 </p>
