@@ -216,7 +216,9 @@ app.put('/user-body', (req, res) => {
 In this step we will use postman to test that our endpoints are returning our user object.
 
 ### Instructions
-Make sure that your server is still running and open postman. In postman make sure PUT is selected, type in `http://localhost:3000/user-query`, and press Send. After that do the same thing for `http://localhost:3000/user-body`.
+Make sure that your server is still running and open postman. In postman make sure PUT is selected, and test both endpoints.
+* `http://localhost:3000/user-query`
+* `http://localhost:3000/user-body`.
 
 ### Solution
 <p align="center">
