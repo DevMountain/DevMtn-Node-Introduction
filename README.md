@@ -189,7 +189,7 @@ app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 
 ## Step 7
 ### Summary
-Now that we have an endpoint at `/user-query` and `/user-body` let's have them return the `user` object. The callback function of an endpoint takes two parameters, the first one being a request object and the second one being a response object. The request object has important information about the incoming request and the response object allows us to send a response back. These variables can be named whatever you like but I usually call them `req` and `res`. 
+Now that we have an endpoint at `/user-query` and `/user-body` let's have them return the `user` object in our callback function. The callback function of an endpoint takes two parameters, the first one being a request object and the second one being a response object. The request object has important information about the incoming request and the response object allows us to send a response back. These variables can be named whatever you like but I usually call them `req` and `res`. 
 
 ### Instructions
 Let's add the two parameters in our callback functions and use `res` to send back `user`. We can do this by using the `.send` method on `res`.
