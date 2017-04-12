@@ -249,15 +249,15 @@ We now know that req.query is equal to an object. After the special character `?
 
 Take note that `"1234"` is a string and not a number. Values will always be stored on req.query as strings.
 ### Instructions
-Knowing that req.query is an object we can check to see if it has a `username` property or a `password` property to update our global `user` object. In our put endpoint lets add two if statements, one for checking if the querry has a `username` property and one for checking if the query has a `password` property. Inside the if statements let's update our global `user` object and then have our endpoint respond with new updated `user` object.
+Knowing that req.query is an object we can check to see if it has a `username` property or a `password` property to update our global `user` object. In our `/user-query` endpoint lets add two if statements, one for checking if the querry has a `username` property and one for checking if the query has a `password` property. Inside the if statements let's update our global `user` object and then have our endpoint respond with new updated `user` object.
 
 ### Solution
 <details>
 <summary> index.js </summary>
 
 ```js
-// http://localhost:3000/user
-app.put('/user', (req, res) => {
+// http://localhost:3000/user-query
+app.put('/user-query', (req, res) => {
   if ( req.query.username ) {
     user.username = req.query.username;
   }
