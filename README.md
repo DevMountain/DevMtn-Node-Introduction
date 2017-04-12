@@ -225,8 +225,6 @@ Make sure that your server is still running and open postman. In postman make su
 <img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/2g-1.gif" width="800">
 </p>
 
-What you see returned are the properties that you originally set on the user object.
-
 ## Step 9
 ### Summary
 In this step we will create the basic outline of the rest of our endpoints. 
