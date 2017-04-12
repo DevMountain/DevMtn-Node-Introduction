@@ -247,7 +247,7 @@ Make sure that your server is still running and open postman. In postman make su
 In this step will go over how to use query parameters on a request to update already existing properties on the `user` object.
 
 
-Let's start by visualizing what happens when we send query parameters to our server. In our index.js, let's respond with req.query in our `put` method. Remember we respond using the `.send` method on `res`.
+Let's start by visualizing what happens when we send query parameters to our server. In our index.js, let's respond with `req.query` in our `/user-query` callback function. Remember we respond using the `.send` method on `res`.
 ```js
 // http://localhost:3000/user-query
 app.put('/user-query', (req, res) => {
