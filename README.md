@@ -213,7 +213,7 @@ app.put('/user-body', (req, res) => {
 
 ## Step 8
 ### Summary
-In this step we will use postman to test that our endpoints are returning our user object.
+In this step we will use postman to test that our endpoints are returning our `user` object.
 
 ### Instructions
 Make sure that your server is still running and open postman. In postman make sure PUT is selected, and test both endpoints.
