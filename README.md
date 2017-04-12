@@ -232,7 +232,7 @@ In this step will go over how to use query parameters on a request to update alr
 
 Let's start by visualizing what happens when we send query parameters to our server. In our index.js, let's respond with req.query in our `put` method. Remember we respond using the `.send` method on `res`.
 ```js
-// http://localhost:3000/user
+// http://localhost:3000/user-query
 app.put('/user-query', (req, res) => {
   res.send(req.query);
 });
