@@ -225,37 +225,6 @@ Make sure that your server is still running and open postman. In postman make su
 <img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/2g-1.gif" width="800">
 </p>
 
-## Step 9
-### Summary
-In this step we will create the basic outline of the rest of our endpoints. 
-
-### Instructions
-On your own try to make an endpoint that will be used for UPDATING properties on the user object and also and endpoint that will be used for CREATING new properties on the user object. Don't worry about the logic that will go inside the endpoint, but rather how you create endpoints. For example: which method you should use and what parameters does the callback function of an endpoint take.
-
-* Since we are using three different methods we can use the exact same path and our server will be smart enough to call the right function. Oooo magic.
-
-Hint:
-```js
-app.*('/user', function)
-```
-
-### Solution
-<details>
-<summary> index.js </summary>
-
-```js
-// http://localhost:3000/user
-app.post('/user', (req, res) => {
-
-});
-
-// http://localhost:3000/user
-app.put('/user', (req, res) => {
-
-});
-```
-</details>
-
 ## Step 10
 ### Summary
 In this step will go over how to use query parameters on a request to update already existing properties on the `user` object.
@@ -264,16 +233,16 @@ In this step will go over how to use query parameters on a request to update alr
 Let's start by visualizing what happens when we send query parameters to our server. In our index.js, let's respond with req.query in our `put` method. Remember we respond using the `.send` method on `res`.
 ```js
 // http://localhost:3000/user
-app.put('/user', (req, res) => {
+app.put('/user-query', (req, res) => {
   res.send(req.query);
 });
 ```
-Now when we do a PUT request on /user our response will be what `req.query` is. Query parameters are constructed in the requesting URL. For example: `http://localhost:3000/user?username=bob`. The `?` is the special character that defines where our parameters begin. This example is sending a parameter of `username` that is equal to `bob`. Let's see what this will return for us.
+Now when we do a PUT request on /user-query our response will be what `req.query` is. Query parameters are constructed in the requesting URL. For example: `http://localhost:3000/user-query?username=bob`. The `?` is the special character that defines where our parameters begin. This example is sending a parameter of `username` that is equal to `bob`. Let's see what this will return for us.
 <p align="center">
 <img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/3g-1.gif" width="800">
 </p>
 
-We now know that req.query is equal to an object. After the special character `?` it looks at the left side of the `=` sign and sets that as the key on an object and looks at the right side of the `=` sign and sets that as the value of the key. You can also send more than one parameter at a time using the special character `&`. For example if I did: `http://localhost:3000/user?username=bob&password=1234` req.query would equal:
+We now know that req.query is equal to an object. After the special character `?` it looks at the left side of the `=` sign and sets that as the key on an object and looks at the right side of the `=` sign and sets that as the value of the key. You can also send more than one parameter at a time using the special character `&`. For example if I did: `http://localhost:3000/user-query?username=bob&password=1234` req.query would equal:
 
 ```js
 {
