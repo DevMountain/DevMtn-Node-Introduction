@@ -5,7 +5,6 @@ const app = express();
 const user = {
 	username: 'dev',
 	password: 'mountain',
-	email: 'dev@mountain.com'
 };
 
 // http://localhost:3000/user
@@ -15,12 +14,12 @@ app.get('/user', (req, res) => {
 
 // http://localhost:3000/user
 app.put('/user', (req, res) => {
-  var keys = Object.keys(req.query);
+  if ( req.query.username ) {
+    user.username = req.query.username;
+  }
 
-  for ( var i = 0; i < keys.length; i++ ) {
-    if ( user.hasOwnProperty(keys[i]) ) {
-      user[keys[i]] = req.query[keys[i]]
-    }
+  if ( req.query.password ) {
+    user.password = req.query.password;
   }
 
   res.send(user);

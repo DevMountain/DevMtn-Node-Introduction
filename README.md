@@ -105,7 +105,7 @@ const app = express();
 app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 ```
 
-We now have a server with no endpoints listening on port 3000 at localhost or 127.0.0.1 and the server will print out 'Server initiated on port 3000' after being initialized.
+We now have a server with no endpoints listening on port 3000 at localhost ( http://localhost:3000/ ) or 127.0.0.1 ( http://127.0.0.1:3000/ ) and the server will print out 'Server initiated on port 3000' after being initialized.
 
 ## Step 4
 ### Summary
@@ -126,7 +126,7 @@ In your terminal, make sure you are in the server directory, run `nodemon`.
 Now that we have a working server will can start making endpoints and mutating some data. In this step we will create a global object called `user` that will have some default properties. This will be the object we will modify and read through endpoints we'll create in the following steps.
 
 ### Instructions
-Let's start by creating an object under `app` called `user`. Let's give it some properties: `username`, `password`, and `email`. The values can be whatever strings you like.
+Let's start by creating an object under `app` called `user`. Let's give it two properties: `username` and `password`. The values can be whatever strings you like.
 
 ### Solution
 <details>
@@ -139,8 +139,7 @@ const app = express();
 
 const user = {
   username: 'dev',
-  password: 'mountain',
-  email: 'dev@mountain.com'
+  password: 'mountain'
 };
 
 app.listen(3000, () => { console.log('Server initiated on port 3000'); });
@@ -171,8 +170,7 @@ const app = express();
 
 const user = {
   username: 'dev',
-  password: 'mountain',
-  email: 'dev@mountain.com'
+  password: 'mountain'
 };
 
 // http://localhost:3000/user
@@ -211,7 +209,7 @@ Make sure that your server is still running and open postman. In postman make su
 
 ### Solution
 <p align="center">
-<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/2g.gif" width="800">
+<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/2g-1.gif" width="800">
 </p>
 
 What you see returned are the properties that you originally set on the user object.
@@ -250,7 +248,8 @@ app.put('/user', (req, res) => {
 ## Step 10
 ### Summary
 In this step will go over how to use query parameters on a request to update already existing properties on the `user` object.
-### Instructions
+
+
 Let's start by visualizing what happens when we send query parameters to our server. In our index.js, let's respond with req.query in our `put` method. Remember we respond using the `.send` method on `res`.
 ```js
 // http://localhost:3000/user
@@ -273,8 +272,8 @@ We now know that req.query is equal to an object. After the special character `?
 ```
 
 Take note that `"1234"` is a string and not a number. Values will always be stored on req.query as strings.
-
-Knowing that req.query is an object and that its values are strings we can loop through the parameters that are sent and update our user object if those properties already exist. To do this will use a method of Object called keys. This returns an array of all the keys on an object. We'll then loop through that array of keys and see if it exists on our user object using another method of Object called hasOwnProperty. If it hasOwnProperty returns true, we will update that property on user using the value on req.query using bracket notation.
+### Instructions
+Knowing that req.query is an object we can check to see if it has a `username` property or a `password` property to update our global `user` object. In our put endpoint lets add two if statements, one for checking if the querry has a `username` property and one for checking if the query has a `password` property. Inside the if statements let's update our global `user` object and then have our endpoint respond with new updated user object.  
 
 ### Solution
 <details>
@@ -283,19 +282,18 @@ Knowing that req.query is an object and that its values are strings we can loop 
 ```js
 // http://localhost:3000/user
 app.put('/user', (req, res) => {
-  var keys = Object.keys(req.query);
+  if ( req.query.username ) {
+    user.username = req.query.username;
+  }
 
-  for ( var i = 0; i < keys.length; i++ ) {
-    if ( user.hasOwnProperty(keys[i]) ) {
-      user[keys[i]] = req.query[keys[i]]
-    }
+  if ( req.query.password ) {
+    user.password = req.query.password;
   }
 
   res.send(user);
 });
 ```
 </details>
-
 
 
 
