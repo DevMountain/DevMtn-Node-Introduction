@@ -298,7 +298,7 @@ Insert fancy giphy here of postman
 
 ## Step 11
 ### Summary
-In this step we'll cover how to use the body of a request to update our global `user` object. Using the body is similar to using the query of a request because they are both objects. However, you send the body as an object alongside the request and we'll use `body-parser` so that we can read the body of the request. 
+In this step we'll cover how to use the body of a request to update our global `user` object. Using the body is similar to using the query of a request because they are both objects. However, you send the body as an object alongside the request and we'll use our `body-parser` package so that we can read the body of the request. 
 
 ### Instructions
 Let's start by opening up postman and typing in our endpoint path. 
