@@ -24,7 +24,14 @@ app.put('/user-query', (req, res) => {
 
 // http://localhost:3000/user-body
 app.put('/user-body', (req, res) => {
-  console.log(req.body);
+  if ( req.body.username ) {
+    user.username = req.body.username;
+  }
+
+  if ( req.body.password ) {
+    user.password = req.body.password;
+  }
+
   res.send(user);
 });
 

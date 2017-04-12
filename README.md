@@ -311,6 +311,54 @@ app.use(bodyParser.json());
 Now when a request comes with JSON we can read it by using `req.body`. Then the logic is the same as looking at `req.query`, if it has a username update the `user`'s username and if it has a password update `user`'s password.
 
 
+In the `/user-body` endpoint let's add the logic to update our `user` object.
+### Solution
+<details>
+<summary> index.js </summary>
+
+```js
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+app.use(express.static( __dirname + '/../' ));
+app.use(bodyParser.json());
+
+const user = {
+	username: 'dev',
+	password: 'mountain',
+};
+
+// http://localhost:3000/user-query
+app.put('/user-query', (req, res) => {
+  if ( req.query.username ) {
+    user.username = req.query.username;
+  }
+
+  if ( req.query.password ) {
+    user.password = req.query.password;
+  }
+
+  res.send(user);
+});
+
+// http://localhost:3000/user-body
+app.put('/user-body', (req, res) => {
+  if ( req.body.username ) {
+    user.username = req.body.username;
+  }
+
+  if ( req.body.password ) {
+    user.password = req.body.password;
+  }
+
+  res.send(user);
+});
+
+app.listen(3000, () => { console.log('Server initiated on port 3000'); });
+```
+</details>
+
+
 
 ## Contributions
 If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
