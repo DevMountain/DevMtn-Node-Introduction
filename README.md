@@ -148,7 +148,7 @@ app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 
 ## Step 6
 ### Summary
-In this step we will create a read enpoint to interact with our global object `user`. In express you can create an endpoint by doing `app.get`, `app.put`, `app.post`, and `app.delete`. `get`, `put`, `post`, and `delete` are known as methods of an HTTP request. Since we want a read endpoint we'll use the get method. Take note that I'm saying `app.*` because our express application was stored in a variable called `app`. If I named it something else like `foo`, then it would be `foo.get`, `foo.put`, `foo.post`, and `foo.delete` instead. 
+In this step we will create two endpoints to interact with our global object `user`. In express you can create an endpoint by doing `app.get`, `app.put`, `app.post`, and `app.delete`. `get`, `put`, `post`, and `delete` are known as methods of an HTTP request. Since we want an update endpoint we'll use the put method. Take note that I'm saying `app.*` because our express application was stored in a variable called `app`. If I named it something else like `foo`, then it would be `foo.get`, `foo.put`, `foo.post`, and `foo.delete` instead. 
 
 HTTP Methods:
 * Reading - GET
@@ -157,7 +157,7 @@ HTTP Methods:
 * Creating - POST
 
 ### Instructions
-After our `user` object let's create a get endpoint using `app.get()`. The first parameter is the path of the endpoint and the second parameter is a function we want to be called when that path is hit. Let's do a get at the path of `/user`.
+After our `user` object let's create two put endpoints using `app.put()`. One will be for updating our user object using the request query and the other will be for updating our user object using the request body. The first parameter is the path of the endpoint and the second parameter is a function we want to be called when that path is hit. Let's do a put at the path of `/user-query` and another put at the path of `/user-body`.
 
 ### Solution
 <details>
@@ -173,8 +173,13 @@ const user = {
   password: 'mountain'
 };
 
-// http://localhost:3000/user
-app.get('/user', () => {
+// http://localhost:3000/user-query
+app.put('/user-query', () => {
+
+});
+
+// http://localhost:3000/user-body
+app.put('/user-body', () => {
 
 });
 
@@ -184,17 +189,23 @@ app.listen(3000, () => { console.log('Server initiated on port 3000'); });
 
 ## Step 7
 ### Summary
-Now that we have an endpoint at `/user` let's have it return the `user` object. The callback function of an endpoint takes two parameters, the first one being a request object and the second one being a response object. The request object has important information about the incoming request and the response object allows us to send a response back. These variables can be named whatever you like but I usually call them `req` and `res`. 
+Now that we have an endpoint at `/user-query` and `/user-body` let's have them return the `user` object. The callback function of an endpoint takes two parameters, the first one being a request object and the second one being a response object. The request object has important information about the incoming request and the response object allows us to send a response back. These variables can be named whatever you like but I usually call them `req` and `res`. 
 
 ### Instructions
-Let's add the two parameters in our callback function and use `res` to send back `user`. We can do this by using the `.send` method on `res`.
+Let's add the two parameters in our callback functions and use `res` to send back `user`. We can do this by using the `.send` method on `res`.
 
 ### Solution
 <details>
 <summary> index.js </summary>
 
-```javascript
-app.get('/user', (req, res) => {
+```js
+// http://localhost:3000/user-query
+app.put('/user-query', (req, res) => {
+  res.send(user);
+});
+
+// http://localhost:3000/user-body
+app.put('/user-body', (req, res) => {
   res.send(user);
 });
 ```
@@ -202,10 +213,10 @@ app.get('/user', (req, res) => {
 
 ## Step 8
 ### Summary
-In this step we will use postman to test that our endpoint is returning our user object.
+In this step we will use postman to test that our endpoints are returning our user object.
 
 ### Instructions
-Make sure that your server is still running and open postman. In postman make sure GET is selected, type in `http://localhost:3000/user`, and press Send.
+Make sure that your server is still running and open postman. In postman make sure PUT is selected, type in `http://localhost:3000/user-query`, and press Send. After that do the same thing for `http://localhost:3000/user-body`.
 
 ### Solution
 <p align="center">

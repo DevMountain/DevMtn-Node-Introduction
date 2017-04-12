@@ -7,27 +7,14 @@ const user = {
 	password: 'mountain',
 };
 
-// http://localhost:3000/user
-app.get('/user', (req, res) => {
-	res.send(user);
-});
-
-// http://localhost:3000/user
-app.put('/user', (req, res) => {
-  if ( req.query.username ) {
-    user.username = req.query.username;
-  }
-
-  if ( req.query.password ) {
-    user.password = req.query.password;
-  }
-
+// http://localhost:3000/user-query
+app.put('/user-query', (req, res) => {
   res.send(user);
 });
 
-// http://localhost:3000/user
-app.post('/user', (req, res) => {
-
+// http://localhost:3000/user-body
+app.put('/user-body', (req, res) => {
+  res.send(user);
 });
 
 app.listen(3000, () => { console.log('Server initiated on port 3000'); });
