@@ -18,11 +18,15 @@ In order to get started with the project we will need to do the following:
 
 ### Summary
 
-In this step we will create a package.json file to keep track of our dependencies and their versions for this project.
+In this step we will create a package.json file to keep track of our dependencies and their versions for this project and also create a `.gitignore` file so our `node_modules` don't get tracked by GitHub. Before we get started, it's important to understand the significance of what the `package.json` does for us. For example, if you have a large corporation working on the same project and one person decides to add new packages to the repository and doesn't tell everyone, the code base isn't going to work for everyone else. Rather than having to remember to send a notification to everyone and everyone manually installing those packages wouldn't it be much more simple if that information was already tracked and they could install those packages with one command? Also what if a specific version number of a package needs to be tracked as well? Having a package.json solves these issues. Whenever some one adds a package to a project using `npm install` they can add a `--save` or a `--save --save-exact` tag so it will automatically be added to the package.json. And whenever someone else needs those new packages they can just run `npm install` to get the packages they are missing and also know they are getting the correct versions of those packages.
+
+In addition to the `package.json` we also have a `.gitignore` file that can tell GitHub to not track files/folders under certain names. Since we have `package.json` managing our packages we do not have to keep the files created from `npm install` tracked on GitHub. This allows much larger projects with a ton of `node_modules` to still be cloned at a rapid rate.ß
 
 ### Instructions
 
 Using `npm` ( which comes installed with node ) we can use a pre-defined CLI command called `init` that will interactively create a package.json for us. In your terminal use `npm init` and press the enter key for every option. This will create a package.json file for us with all the default values.
+
+After that create a `.gitignore` file in the root of the project and add `node_modules` to the first line and save. The reason why we use `node_modules` is because `npm` installs packages into a folder called `node_modules`.
 
 ### Solution
 
@@ -45,6 +49,7 @@ You should now have a file called `package.json` inside the `server` folder:
   "license": "ISC"
 }
 ```
+
 </details>
 
 ## Step 2
@@ -61,6 +66,7 @@ Using the terminal you can install multiple packages using `npm install <package
 
 Your package.json should look very familiar to the following (version numbers may vary):
 <details>
+
 <summary><code>package.json</code></summary>
 
 ```javascript
