@@ -138,10 +138,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
-app.listen(3000, () => console.log('Server initiated on port 3000'));
+app.listen(3000, () => console.log('Server listening on port 3000'));
 ```
 
-We now have a server, that when started, will listen on port 3000 at localhost ( http://localhost:3000/ ) or 127.0.0.1 ( http://127.0.0.1:3000/ ) and will print 'Server initiated on port 3000' to the terminal after being initialized.
+We now have a server, that when started, will listen on port 3000 at localhost ( http://localhost:3000/ ) or 127.0.0.1 ( http://127.0.0.1:3000/ ) and will print 'Server listening on port 3000' to the terminal after being initialized.
 
 
 ## Step 4
@@ -162,7 +162,7 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(express.static( __dirname + '/../' ));
 
-app.listen(3000, () => console.log('Server initiated on port 3000'));
+app.listen(3000, () => console.log('Server listening on port 3000'));
 ```
 
 `__dirname + '/../'` means use the current directory of this file ( in our case this would be `server/` ) and go up one directory ( which would put us in the same directory as index.html )
@@ -215,7 +215,7 @@ const user = {
   password: 'mountain'
 };
 
-app.listen(3000, () => console.log('Server initiated on port 3000'));
+app.listen(3000, () => console.log('Server listening on port 3000'));
 ```
 
 </details>
@@ -263,7 +263,7 @@ app.put('/user-body', () => {
 
 });
 
-app.listen(3000, () => console.log('Server initiated on port 3000'));
+app.listen(3000, () => console.log('Server listening on port 3000'));
 ```
 
 </details>
@@ -445,7 +445,7 @@ app.put('/user-body', (req, res) => {
   res.send(user);
 });
 
-app.listen(3000, () => console.log('Server initiated on port 3000'));
+app.listen(3000, () => console.log('Server listening on port 3000'));
 ```
 
 </details>
