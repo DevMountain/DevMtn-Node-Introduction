@@ -104,7 +104,7 @@ If you do not see `"dependencies"` then you forgot to add the `--save` tag to yo
 
 ### Summary
 
-In this step we will create the basic outline of our server in a javascript file. The name of this file doesn't matter as long as it matches the entry point in your package.json. Since we created our package.json using the default values it is expecting a file called `index.js`.
+In this step we will create the file where Node starts to read our Javascript code. This file is also called the "entry point" and it is referenced in our `package.json` file. By default, the `npm init` command sets this entry file to be `index.js`. After creating the `index.js` file, we will write some code to make our Node app listen to a port for http requests and respond to them — the beginnings of a server.
 
 ### Instructions
 
