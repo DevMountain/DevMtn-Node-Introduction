@@ -8,9 +8,6 @@ In this project we will go over the basics of setting up a node server that can 
 
 In order to get started with the project we will need to do the following:
 
-* Install postman ( https://www.getpostman.com/ )
-* Install node - Make sure to select current, not LTS ( https://nodejs.org/en/download/ )
-* Install nodemon ( `sudo npm install -g nodemon` )
 * Create a directory called server in the root of the project ( `mkdir server` )
 * `cd` into server
 
