@@ -59,6 +59,14 @@ You should now have a file called `package.json` inside the `server` folder:
 
 </details>
 
+<details>
+
+<summary> .gitignore </summary>
+
+node_modules
+
+</details>
+
 ## Step 2
 
 ### Summary
