@@ -4,13 +4,6 @@
 
 In this project we will go over the basics of setting up a node server that can serve HTML files, test our server's endpoints using postman, and learn how to use the body and parameters of a request.
 
-## Setup
-
-In order to get started with the project we will need to do the following:
-
-* Create a directory called server in the root of the project ( `mkdir server` )
-* `cd` into server
-
 ## Step 1
 
 ### Summary
@@ -113,14 +106,14 @@ In this step we will create the file where Node starts to read our Javascript co
 
 ### Instructions
 
-Create a file called `index.js` in the server folder and open it. We'll start by requiring the packages we installed earlier at the top of the file.
+Create a file called `index.js` in root of the project and open it. We'll start by requiring the packages we installed earlier at the top of the file.
 
 ```javascript
 const express = require('express');
 const bodyParser = require('body-parser');
 ```
 
-This file now knows about the `express` and `body-parser` packages inside of our node_modules folder. Creating a server using express is as easy as invoking express and assigning it to a variable.
+This file now knows about the `express` and `body-parser` packages inside of our `node_modules` folder. Creating a server using express is as easy as invoking express and assigning it to a variable.
 
 ```javascript
 const express = require('express');
@@ -157,12 +150,10 @@ When using express you can serve HTML files using middleware and the `static` me
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-app.use(express.static( __dirname + '/../' ));
+app.use(express.static( 'public' ));
 
 app.listen(3000, () => console.log('Server listening on port 3000'));
 ```
-
-`__dirname + '/../'` means use the current directory of this file ( in our case this would be `server/` ) and go up one directory ( which would put us in the same directory as index.html )
 
 ## Step 5
 
