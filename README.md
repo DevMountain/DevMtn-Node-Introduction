@@ -27,7 +27,7 @@ After that create a `.gitignore` file in the root of the project and add `node_m
 
 ### Solution
 
-You should now have a file called `package.json` inside the `server` folder:
+You should now have a file called `package.json` in the root of the project:
 
 <details>
 
@@ -159,14 +159,14 @@ app.listen(3000, () => console.log('Server listening on port 3000'));
 
 ### Summary
 
-In this step we will start our server. If everything intializes correctly you should see a log in your terminal `'Server inititated on port 3000'`. If you are seeing errors with `const` check to make sure that your node version is +7.5.0.
+In this step we will start our server. If everything intializes correctly you should see a log in your terminal `'Server listening on port 3000'`. If you are seeing errors with `const` check to make sure that your node version is +7.5.0.
 
 * Check node version: In your terminal use the command `node --version`
 * Download node: https://nodejs.org/en/download/
 
 ### Instructions
 
-In your terminal, make sure you are in the server directory, run `nodemon`.
+In your terminal, make sure you are in the root directory, and run `nodemon`.
 
 ### Solution
 
@@ -196,7 +196,7 @@ Let's start by creating an object under `app` called `user`. Let's give it two p
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-app.use(express.static( __dirname + '/../' ));
+app.use(express.static( 'public' ));
 
 const user = {
   username: 'dev',
@@ -234,7 +234,7 @@ After our `user` object let's create two put endpoints using `app.put()`. One wi
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-app.use(express.static( __dirname + '/../' ));
+app.use(express.static( 'public' ));
 
 const user = {
   username: 'dev',
@@ -399,7 +399,7 @@ In the `/user-body` endpoint let's add the logic to update our `user` object. Th
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-app.use(express.static( __dirname + '/../' ));
+app.use(express.static( 'public' ));
 app.use(bodyParser.json());
 
 const user = {
