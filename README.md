@@ -171,9 +171,9 @@ In your terminal, make sure you are in the server directory, run `nodemon`.
 ### Solution
 
 <p align="center">
-<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/1g.gif" width="800">
+<img src="https://github.com/DevMountain/DevMtn-Node-Introduction/blob/solution/readme/1g.gif" width="800">
 <br />
-<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/5g.gif" width="800">
+<img src="https://github.com/DevMountain/DevMtn-Node-Introduction/blob/solution/readme/5g.gif" width="800">
 </p>
 
 ## Step 6
@@ -301,7 +301,7 @@ Make sure that your server is still running and open postman. In postman make su
 ### Solution
 
 <p align="center">
-<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/2g-1.gif" width="800">
+<img src="https://github.com/DevMountain/DevMtn-Node-Introduction/blob/solution/readme/2g-1.gif" width="800">
 </p>
 
 ## Step 10
@@ -323,7 +323,7 @@ app.put('/user-query', (req, res) => {
 Now when we do a PUT request on `/user-query` our response will be what `req.query` is. Query parameters are constructed in the requesting URL. For example: `http://localhost:3000/user-query?username=bob`. The `?` is the special character that defines where our parameters begin. This example is sending a parameter of `username` that is equal to `bob`. Let's see what this will return for us.
 
 <p align="center">
-<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/3g-2.gif" width="800">
+<img src="https://github.com/DevMountain/DevMtn-Node-Introduction/blob/solution/readme/3g-2.gif" width="800">
 </p>
 
 We now know that req.query is equal to an object. After the special character `?` it looks at the left side of the `=` sign and sets that as the key on an object and looks at the right side of the `=` sign and sets that as the value of the key. You can also send more than one parameter at a time using the special character `&`. For example if I did: `http://localhost:3000/user-query?username=bob&password=1234` req.query would equal:
@@ -367,7 +367,7 @@ app.put('/user-query', (req, res) => {
 <br />
 
 <p align="center">
-<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/4g.gif" width="800">
+<img src="https://github.com/DevMountain/DevMtn-Node-Introduction/blob/solution/readme/4g.gif" width="800">
 </p>
 
 ## Step 11
@@ -441,7 +441,7 @@ app.listen(3000, () => console.log('Server listening on port 3000'));
 <br />
 
 <p align="center">
-<img src="https://github.com/devlemire/DevMtn-Node-Introduction/blob/solution/readme/6g.gif" width="800">
+<img src="https://github.com/DevMountain/DevMtn-Node-Introduction/blob/solution/readme/6g.gif" width="800">
 </p>
 
 
